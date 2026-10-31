@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "TelemetryRecorded",
+  "namespace": "io.celltrace.events",
+  "fields": [
+    {"name": "event_id", "type": {"type": "string", "logicalType": "uuid"}},
+    {"name": "event_type", "type": "string"},
+    {"name": "schema_version", "type": "int"},
+    {"name": "occurred_at", "type": {"type": "long", "logicalType": "timestamp-millis"}},
+    {"name": "correlation_id", "type": {"type": "string", "logicalType": "uuid"}},
+    {"name": "causation_id", "type": ["null", {"type": "string", "logicalType": "uuid"}], "default": null},
+    {"name": "producer", "type": "string"},
+    {"name": "actor", "type": "string"},
+    {"name": "payload", "type": {
+      "type": "record",
+      "name": "TelemetryRecordedPayload",
+      "fields": [
+        {"name": "device_id", "type": "string"},
+        {"name": "station_id", "type": "string"},
+        {"name": "seq_no", "type": "long"},
+        {"name": "temperature_c", "type": ["null", "float"], "default": null},
+        {"name": "humidity_pct", "type": ["null", "float"], "default": null},
+        {"name": "distance_cm", "type": ["null", "float"], "default": null},
+        {"name": "motion_detected", "type": "boolean"}
+      ]
+    }}
+  ]
+}

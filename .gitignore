@@ -1,0 +1,22 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Go / Node
+node_modules/
+dist/
+
+# Lokale Daten
+*.sqlite
+*.db
