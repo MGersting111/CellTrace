@@ -18,3 +18,4 @@ register() {   # usage: register <subject> <datei> <compatibility>
 }
 
 register telemetry.station.v1-value schemas/telemetry_recorded.avsc BACKWARD
+register mes.quality-value schemas/mes_quality.avsc BACKWARD

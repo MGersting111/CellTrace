@@ -22,6 +22,6 @@
     "transforms.outbox.route.topic.replacement": "mes.${routedByValue}",
 
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
-    "value.converter": "org.apache.kafka.connect.storage.StringConverter"
+    "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter"
   }
 }

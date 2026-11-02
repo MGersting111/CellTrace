@@ -4,12 +4,12 @@ from confluent_kafka.schema_registry.avro import AvroDeserializer
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.serialization import SerializationContext, MessageField
 
-TOPIC = "telemetry.station.v1"
+TOPIC = "mes.quality"
 registry = SchemaRegistryClient({"url": "http://localhost:8081"})
 deserializer = AvroDeserializer(registry)
 consumer = Consumer({
     "bootstrap.servers": "localhost:9092",
-    "group.id": "debug",
+    "group.id": "debug-quality",
     "auto.offset.reset": "earliest",
 })
 consumer.subscribe([TOPIC])

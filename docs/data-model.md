@@ -123,7 +123,7 @@ erDiagram
         text aggregatetype "routet ins Topic mes.<x>"
         text aggregateid "= Kafka-Key (serial)"
         text type "Event-Typ"
-        jsonb payload "Envelope + Payload"
+        bytea payload "Envelope + Payload"
         timestamptz created_at
     }
     idempotency_key {
